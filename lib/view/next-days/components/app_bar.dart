@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:weather/res/images/image_assets.dart';
+import 'package:weather/view/home/home_screen.dart';
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});
 
@@ -10,16 +12,19 @@ class CustomAppBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Container(
-            height: 40,
-            width: 40,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
+          GestureDetector(
+            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen(),)),
+            child: Container(
+              height: 40,
+              width: 40,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: const Icon(Icons.arrow_back_ios_new_rounded,color: Colors.blue,size: 20,),
             ),
-            child: const Icon(Icons.arrow_back_ios_new_rounded,color: Colors.blue,size: 20,),
           ),
-          const Text('Next 14 Days',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),),
+          const Text('Idućih 14 dana',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),),
           const SizedBox(),
         ],
       ),

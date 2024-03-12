@@ -7,6 +7,9 @@ class BottomList extends StatelessWidget {
    BottomList({super.key});
   final homeController=Get.put(HomeController());
   final controller=Get.put(DaysController());
+  List<String> daysOfWeek = ['Srijeda 12 Ožu', 'Četvrtak 13 Ožu', 'Petak 14 Ožu', 'Subota 15 Ožu', 'Nedjelja 16 Ožu','Ponedjeljak 17 Ožu', 'Utorak 18 Ožu', 'Srijeda 19 Ožu', 'Četvrtak 20 Ožu', 'Petak 21 Ožu', 'Subota 22 Ožu', 'Nedjelja 23 Ožu', 'Ponedjeljak 24 Ožu', 'Utorak 25 Ožu', 'Srijeda 26 Ožu'];
+
+
   @override
   Widget build(BuildContext context) {
     var size=MediaQuery.sizeOf(context);
@@ -36,7 +39,7 @@ class BottomList extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text(controller.getDate(index),
+                    Text(daysOfWeek[index],
                       style: const TextStyle(color: Colors.blue,fontWeight: FontWeight.bold,fontSize: 15),
                     ),
                     RichText(text: TextSpan(

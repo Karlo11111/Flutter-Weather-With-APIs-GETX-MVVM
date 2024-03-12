@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:weather/view_model/controllers/home_controller.dart';
@@ -46,14 +48,14 @@ class InfoCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Obx(() => Text(
-                  controller.getCondition(),
+                Text(
+                  "Vedro",
                   style: const TextStyle(
                       height: 0,
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
                       fontSize: 23),
-                ),),
+                ),
                 const SizedBox(height: 5,),
                 Text(
                   Utils.currentTime(),
@@ -84,8 +86,8 @@ class InfoCard extends StatelessWidget {
                       // Adjust the stops to control the gradient area
                     ).createShader(bounds);
                   },
-                  child: Obx(() => Text(
-                    controller.getCurrentTemp(),
+                  child: Text(
+                    "12°",
                     style: const TextStyle(
                       fontSize: 60,
                       height: 0,
@@ -93,16 +95,16 @@ class InfoCard extends StatelessWidget {
                       color:
                       Colors.white, // Initial color of the text
                     ),
-                  )),
+                  ),
 
                 ),
-                Obx(() => Text(
-                  'Feel like ${controller.getFeelLike()}',
+                Text(
+                  'Osjet 13°',
                   style: const TextStyle(
                       height: 0,
                       color: Colors.white,
                       fontWeight: FontWeight.bold),
-                ),)
+                ),
 
               ],
             ),

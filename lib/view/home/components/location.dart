@@ -16,7 +16,7 @@ class Location extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              controller.getAddress(),
+              "Zadar, Hrvatska",
               style: const TextStyle(
                   height: 0,
                   color: Colors.black,
@@ -24,7 +24,7 @@ class Location extends StatelessWidget {
                   fontSize: 25),
             ),
             Text(
-              Utils.formateDate(DateTime.now()),
+              "3.12.2024.",
               style: TextStyle(
                   color: Colors.grey.withOpacity(.7),
                   fontWeight: FontWeight.bold),

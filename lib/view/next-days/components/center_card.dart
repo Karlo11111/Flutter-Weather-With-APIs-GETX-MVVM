@@ -59,8 +59,8 @@ class CenterCard extends StatelessWidget {
                                   // Adjust the stops to control the gradient area
                                 ).createShader(bounds);
                               },
-                              child: Obx(()=>Text(
-                                '${controller.day.value.temp.toInt().toString()}\u00B0',
+                              child: Text(
+                                '13°',
                                 style: const TextStyle(
                                   fontSize: 80,
                                   height: 0,
@@ -68,15 +68,15 @@ class CenterCard extends StatelessWidget {
                                   color:
                                   Colors.white, // Initial color of the text
                                 ),
-                              ),)
+                              ),
                           ),
-                          Obx(() => Text(
-                            'Feel like ${controller.day.value.feelslike}',
+                          Text(
+                            'Osjet 13°',
                             style: const TextStyle(
                                 height: 0,
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold),
-                          ),)
+                          ),
 
                         ],
                       ),
@@ -90,14 +90,14 @@ class CenterCard extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Spacer(),
-                          Obx(() => Text(
-                            controller.day.value.conditions,
+                          Text(
+                            "Vedro",
                             style: const TextStyle(
                                 height: 0,
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 20),
-                          ),),
+                          ),
                           const SizedBox(height: 5,),
                           Text(
                             Utils.currentTime(),
