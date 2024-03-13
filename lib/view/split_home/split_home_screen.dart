@@ -3,22 +3,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:weather/view/split_home/split_home_screen.dart';
 import 'package:weather/view/home/components/app_bar.dart';
 import 'package:weather/view/home/components/container_list.dart';
 import 'package:weather/view/home/components/hours_list.dart';
-import 'package:weather/view/home/components/info_card.dart';
-import 'package:weather/view/home/components/location.dart';
+import 'package:weather/view/split_home/components/split_info_card.dart';
+import 'package:weather/view/split_home/components/location.dart';
+import 'package:weather/view/home/home_screen.dart';
 import 'package:weather/view/next-days/next_14_days.dart';
 import 'package:weather/view/zagreb_home/zagreb_home_screen.dart';
 import 'package:weather/view_model/controllers/home_controller.dart';
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class SplitHomeScreen extends StatefulWidget {
+  const SplitHomeScreen({super.key});
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<SplitHomeScreen> createState() => _SplitHomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _SplitHomeScreenState extends State<SplitHomeScreen> {
   GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
 
@@ -65,7 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ListTile(
                 title: Text('Zagreb'),
                 onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => ZagrebHomeScreen(),));
+                 Navigator.push(context, MaterialPageRoute(builder: (context) => ZagrebHomeScreen(),));
                 },
               ),
             ],
@@ -91,7 +91,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     tag: 'TAG',
                     child: Material(
                         color: Colors.transparent,
-                        child: InfoCard())),
+                        child: SplitInfoCard())),
                 ContainerList(),
                 const SizedBox(
                   height: 20,

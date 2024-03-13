@@ -3,22 +3,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:weather/view/split_home/split_home_screen.dart';
 import 'package:weather/view/home/components/app_bar.dart';
 import 'package:weather/view/home/components/container_list.dart';
 import 'package:weather/view/home/components/hours_list.dart';
 import 'package:weather/view/home/components/info_card.dart';
-import 'package:weather/view/home/components/location.dart';
+import 'package:weather/view/zagreb_home/components/location.dart';
+import 'package:weather/view/home/home_screen.dart';
 import 'package:weather/view/next-days/next_14_days.dart';
-import 'package:weather/view/zagreb_home/zagreb_home_screen.dart';
 import 'package:weather/view_model/controllers/home_controller.dart';
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class ZagrebHomeScreen extends StatefulWidget {
+  const ZagrebHomeScreen({super.key});
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<ZagrebHomeScreen> createState() => _ZagrebHomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _ZagrebHomeScreenState extends State<ZagrebHomeScreen> {
   GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
 
@@ -59,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ListTile(
                 title: Text('Split'),
                 onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => SplitHomeScreen(),));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => ZagrebHomeScreen(),));
                 },
               ),
               ListTile(
